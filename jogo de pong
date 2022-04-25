@@ -1,0 +1,38 @@
+let bolX = 200;
+let bolY = 200;
+let speedX = 2;
+let speedY = 3;
+
+function setup() {
+  createCanvas(400, 400);
+  
+  bolX = 200;
+  
+  bolY = 200;
+}
+
+function draw() {
+  background(220);
+  circle (bolX,bolY,20);
+  
+  bolY += speedY;
+  bolX += speedX;
+  
+  if (bolX >= height)
+    {
+      speedX *= -1;
+    } 
+  
+  if (bolY >= width)
+    {
+      speedY *= -1;
+    }
+  if (bolY <= 0)
+    {
+      speedY *= -1;
+    }
+  if (bolX <= 0)
+    {
+      speedX *= -1;
+    }
+}
